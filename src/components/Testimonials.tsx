@@ -14,7 +14,7 @@ const Testimonials = () => {
       name: "Amit Kumar",
       course: "B.Tech Computer Science",
       year: "2023",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300",
+      image: "/img13.jpg",
       rating: 5,
       text: "FARAKKA has provided me with excellent education and opportunities. The faculty is highly supportive and the infrastructure is top-notch. I'm grateful for the holistic development I received here."
     },
@@ -22,7 +22,7 @@ const Testimonials = () => {
       name: "Priya Sharma",
       course: "MBA Marketing",
       year: "2022",
-      image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=300&h=300",
+      image: "/img12.jpg",
       rating: 5,
       text: "The skill development programs and industry connections at FARAKKA helped me secure a great job immediately after graduation. The practical approach to learning is exceptional."
     },
@@ -30,7 +30,7 @@ const Testimonials = () => {
       name: "Rahul Singh",
       course: "Diploma in Engineering",
       year: "2023",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300&h=300",
+      image: "/img3.jpg",
       rating: 5,
       text: "Best decision of my life was choosing FARAKKA. The teachers are not just educators but mentors who guide you at every step. The campus life and learning environment are amazing."
     }

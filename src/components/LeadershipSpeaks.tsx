@@ -14,7 +14,7 @@ const LeadershipSpeaks = () => {
       type: "FOUNDER'S MESSAGE",
       name: "Jakir Hossain",
       title: "Founder, FARAKKA Progressive Educational Welfare Society",
-      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=600&h=800",
+      image: "/img1.jpg",
       greeting: "Dear Friends, Supporters, and Community Members,",
       content: [
         "With immense pride, I extend my heartfelt greetings to you all. The FARAKKA Progressive Educational Welfare Society was founded with a deep commitment to education and social upliftment, ensuring that every individual, regardless of their background, has the opportunity to lead a life of dignity and purpose. We believe education is the key to empowerment, transforming communities and shaping a brighter future. Our programs focus on academic excellence while fostering values of integrity, empathy, and social responsibility.",
@@ -25,7 +25,7 @@ const LeadershipSpeaks = () => {
       type: "PRESIDENT'S MESSAGE",
       name: "Dipak Kumar Das",
       title: "President, FARAKKA Progressive Educational Welfare Society",
-      image: "https://images.pexels.com/photos/1181681/pexels-photo-1181681.jpeg?auto=compress&cs=tinysrgb&w=600&h=800",
+      image: "/img2.jpg",
       greeting: "Dear Students, Educators, Benefactors, and Community Members,",
       content: [
         "At FARAKKA Progressive Educational Welfare Society, we are committed to empowering lives through education and community service. Our goal is to provide quality education that nurtures intellectual growth, character, and leadership. With a focus on holistic development, we ensure that every student receives the skills and values needed to succeed in life.",

@@ -129,8 +129,8 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"
-                alt="Campus"
+                src="/ab1.jpg"
+                alt="Leadership Team"
                 className="rounded-2xl shadow-2xl"
               />
             </motion.div>
@@ -156,6 +156,82 @@ const About = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Additional Image Sections */}
+      <section className="py-20 bg-green-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-green-600 mb-4">Our Campus & Community</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A glimpse into our vibrant campus life and community engagement
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-6"
+            >
+              <img
+                src="/ab2.jpg"
+                alt="National Flag Ceremony"
+                className="rounded-2xl shadow-2xl w-full"
+              />
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-green-600 mb-2">National Pride</h3>
+                <p className="text-gray-700">
+                  Celebrating our national identity and fostering patriotism through flag ceremonies and cultural events.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="space-y-6"
+            >
+              <img
+                src="/ab3.jpg"
+                alt="Professional Team"
+                className="rounded-2xl shadow-2xl w-full"
+              />
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-green-600 mb-2">Professional Excellence</h3>
+                <p className="text-gray-700">
+                  Our dedicated team of educators and administrators working together for student success.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-16 text-center"
+          >
+            <img
+              src="/ab4.jpg"
+              alt="Community Gathering"
+              className="rounded-2xl shadow-2xl mx-auto max-w-4xl w-full"
+            />
+            <div className="mt-6">
+              <h3 className="text-2xl font-bold text-green-600 mb-2">Community Unity</h3>
+              <p className="text-gray-700 max-w-3xl mx-auto">
+                Bringing together students, faculty, and community members for shared educational and social initiatives.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
