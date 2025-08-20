@@ -57,33 +57,48 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <Link
+              <motion.div
                 key={item.path}
-                to={item.path}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
-                  location.pathname === item.path
-                    ? 'text-green-600'
-                    : 'text-gray-700 hover:text-green-600'
-                }`}
+                whileHover={{ 
+                  scale: 1.05,
+                  y: -2
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 400, 
+                  damping: 10 
+                }}
               >
-                {item.name}
-                {location.pathname === item.path && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-400"
-                  />
-                )}
-              </Link>
+                <Link
+                  to={item.path}
+                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
+                    location.pathname === item.path
+                      ? 'text-green-600 bg-green-50'
+                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                  }`}
+                >
+                  {item.name}
+                  {location.pathname === item.path && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-400"
+                    />
+                  )}
+                </Link>
+              </motion.div>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-green-600"
+            className="md:hidden p-2 text-gray-700 hover:text-green-600 transition-colors duration-200"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          </motion.button>
         </div>
 
         {/* Mobile Menu */}
@@ -97,19 +112,36 @@ const Navbar = () => {
           className="md:hidden overflow-hidden"
         >
           <div className="py-4 space-y-2">
-            {navItems.map((item) => (
-              <Link
+            {navItems.map((item, index) => (
+              <motion.div
                 key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-                  location.pathname === item.path
-                    ? 'text-green-600 bg-green-50'
-                    : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
-                }`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ 
+                  opacity: isOpen ? 1 : 0, 
+                  x: isOpen ? 0 : -20 
+                }}
+                transition={{ 
+                  duration: 0.3, 
+                  delay: index * 0.1 
+                }}
+                whileHover={{ 
+                  scale: 1.02,
+                  x: 5
+                }}
+                whileTap={{ scale: 0.98 }}
               >
-                {item.name}
-              </Link>
+                <Link
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-4 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${
+                    location.pathname === item.path
+                      ? 'text-green-600 bg-green-50 border-l-4 border-green-500'
+                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50 hover:border-l-4 hover:border-green-300'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </motion.div>

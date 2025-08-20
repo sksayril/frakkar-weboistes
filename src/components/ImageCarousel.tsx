@@ -7,29 +7,24 @@ const ImageCarousel = () => {
 
   const images = [
     {
-      src: "https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080",
-      title: "Campus Life",
-      description: "Vibrant campus environment fostering learning and growth"
+      src: "/img6.jpg",
+      title: "Student Assembly",
+      description: "Vibrant student community gathered for learning and growth"
     },
     {
-      src: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080",
-      title: "Modern Facilities",
-      description: "State-of-the-art infrastructure for quality education"
+      src: "/img8.jpg",
+      title: "Faculty Excellence",
+      description: "Our dedicated team of educators and staff members"
     },
     {
-      src: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080",
-      title: "Academic Excellence",
-      description: "Dedicated faculty and innovative teaching methods"
+      src: "/img9.jpg",
+      title: "Academic Leadership",
+      description: "Experienced faculty committed to student success"
     },
     {
-      src: "https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080",
-      title: "Learning Environment",
-      description: "Interactive classrooms designed for optimal learning"
-    },
-    {
-      src: "https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080",
-      title: "Skill Development",
-      description: "Practical training and hands-on experience"
+      src: "/img10.jpg",
+      title: "Professional Team",
+      description: "Skilled educators and administrators working together"
     }
   ];
 

@@ -13,7 +13,7 @@ const TeamSection = () => {
     {
       name: "Jakir Hossain",
       position: "Founder & Chairman",
-      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400&h=500",
+      image: "/img1.jpg",
       description: "Visionary leader with over 20 years of experience in educational development and community welfare.",
       achievements: ["Educational Excellence Award", "Community Service Recognition", "Leadership in Education"],
       icon: Award
@@ -21,7 +21,7 @@ const TeamSection = () => {
     {
       name: "Dipak Kumar Das",
       position: "President",
-      image: "https://images.pexels.com/photos/1181681/pexels-photo-1181681.jpeg?auto=compress&cs=tinysrgb&w=400&h=500",
+      image: "/img2.jpg",
       description: "Dedicated leader committed to advancing educational opportunities and fostering academic excellence.",
       achievements: ["Academic Leadership Award", "Innovation in Education", "Student Success Champion"],
       icon: Star
@@ -32,7 +32,7 @@ const TeamSection = () => {
     {
       name: "Dr. Priya Sharma",
       position: "Head of Computer Science",
-      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400&h=500",
+      image: "/img3.jpg",
       specialization: "Artificial Intelligence & Machine Learning",
       experience: "15+ years",
       icon: GraduationCap
@@ -40,7 +40,7 @@ const TeamSection = () => {
     {
       name: "Prof. Rajesh Kumar",
       position: "Head of Business Management",
-      image: "https://images.pexels.com/photos/1181681/pexels-photo-1181681.jpeg?auto=compress&cs=tinysrgb&w=400&h=500",
+      image: "/img5.jpg",
       specialization: "Strategic Management & Finance",
       experience: "12+ years",
       icon: Target
@@ -48,7 +48,7 @@ const TeamSection = () => {
     {
       name: "Dr. Sunita Patel",
       position: "Head of Arts & Sciences",
-      image: "https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=400&h=500",
+      image: "/img10.jpg",
       specialization: "Literature & Cultural Studies",
       experience: "18+ years",
       icon: Heart
@@ -56,7 +56,7 @@ const TeamSection = () => {
     {
       name: "Prof. Amit Singh",
       position: "Head of Engineering",
-      image: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400&h=500",
+      image: "/img11.jpg",
       specialization: "Mechanical Engineering & Robotics",
       experience: "14+ years",
       icon: Users
@@ -64,7 +64,7 @@ const TeamSection = () => {
     {
       name: "Dr. Meera Reddy",
       position: "Head of Vocational Training",
-      image: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=400&h=500",
+      image: "/img12.jpg",
       specialization: "Skill Development & Training",
       experience: "10+ years",
       icon: Award
@@ -72,7 +72,7 @@ const TeamSection = () => {
     {
       name: "Prof. Arjun Verma",
       position: "Head of Research & Development",
-      image: "https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=400&h=500",
+      image: "/img13.jpg",
       specialization: "Research Methodology & Innovation",
       experience: "16+ years",
       icon: Star

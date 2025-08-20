@@ -21,40 +21,40 @@ const Mission = () => {
 
   const allImages = [
     {
-      src: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=800&h=600",
-      alt: "Educational Ceremony",
-      title: "Annual Educational Ceremony",
-      description: "Students and faculty celebrating academic achievements and milestones in our annual ceremony."
+      src: "/img12.jpg",
+      alt: "Speaker at Podium",
+      title: "Leadership Address",
+      description: "Our leaders addressing the community and sharing our vision for educational excellence and social welfare."
     },
     {
-      src: "https://images.pexels.com/photos/1181681/pexels-photo-1181681.jpeg?auto=compress&cs=tinysrgb&w=600&h=400",
-      alt: "Community Service",
-      title: "Community Outreach Program",
-      description: "Our dedicated team working with local communities to provide educational support and resources."
+      src: "/img13.jpg",
+      alt: "Community Speaker",
+      title: "Community Engagement",
+      description: "Active participation in community events and educational programs that bring people together."
     },
     {
-      src: "https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=600&h=400",
-      alt: "Student Activities",
-      title: "Student Learning Activities",
-      description: "Interactive learning sessions where students engage in hands-on educational experiences."
+      src: "/img15.jpg",
+      alt: "Felicitation Ceremony",
+      title: "Recognition Ceremony",
+      description: "Honoring achievements and contributions in our annual felicitation ceremony celebrating excellence."
     },
     {
-      src: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=600&h=400",
-      alt: "Modern Facilities",
-      title: "State-of-the-Art Facilities",
-      description: "Modern classrooms and laboratories equipped with the latest technology for enhanced learning."
+      src: "/img12.jpg",
+      alt: "Speaker at Podium",
+      title: "Leadership Address",
+      description: "Our leaders addressing the community and sharing our vision for educational excellence and social welfare."
     },
     {
-      src: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=600&h=400",
-      alt: "Business Education",
-      title: "Business Management Program",
-      description: "Students learning essential business skills and management principles for future success."
+      src: "/img13.jpg",
+      alt: "Community Speaker",
+      title: "Community Engagement",
+      description: "Active participation in community events and educational programs that bring people together."
     },
     {
-      src: "https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=600&h=400",
-      alt: "Classroom Learning",
-      title: "Interactive Classroom Environment",
-      description: "Engaging classroom sessions that promote critical thinking and collaborative learning."
+      src: "/img15.jpg",
+      alt: "Felicitation Ceremony",
+      title: "Recognition Ceremony",
+      description: "Honoring achievements and contributions in our annual felicitation ceremony celebrating excellence."
     }
   ];
 
