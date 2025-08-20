@@ -34,17 +34,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      content: "Farakka, Murshidabad District\nWest Bengal, India - 742202"
+      content: "Vill- Manikpur, PO- Dafahat\nDist.- Murshidabad, West Bengal-742224"
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 98765 43210\n+91 87654 32109"
+      content: "+91 78658 44944"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@farakkaeducation.org\nadmissions@farakkaeducation.org"
+      content: "fpews.official@gmail.com"
     },
     {
       icon: Clock,
@@ -345,30 +345,18 @@ const Contact = () => {
             }}
             className="bg-white rounded-2xl shadow-xl overflow-hidden"
           >
-            <div className="aspect-video bg-green-100 flex items-center justify-center">
-              <motion.div 
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
-                <motion.div
-                  animate={{ 
-                    y: [0, -10, 0],
-                    rotate: [0, 5, -5, 0]
-                  }}
-                  transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <MapPin className="h-16 w-16 text-green-600 mx-auto mb-4" />
-                </motion.div>
-                <h3 className="text-2xl font-bold text-green-600 mb-2">Interactive Map</h3>
-                <p className="text-gray-600">Map integration would be implemented here</p>
-                <p className="text-sm text-gray-500 mt-2">Farakka, Murshidabad District, West Bengal</p>
-              </motion.div>
+            <div className="w-full h-[450px] rounded-2xl overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.322038582666!2d88.00578351147728!3d24.61258315503907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fa45f94cd8efbd%3A0x45b3a5b501df076d!2sNATHULAL%20DAS%20B.ED%20COLLEGE!5e0!3m2!1sen!2sin!4v1755685003408!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Nathulal Das B.Ed College Location"
+                className="w-full h-full"
+              ></iframe>
             </div>
           </motion.div>
         </div>

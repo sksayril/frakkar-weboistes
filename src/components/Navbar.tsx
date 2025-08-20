@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { scrollToTop } from '../utils/scrollUtils';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,12 @@ const Navbar = () => {
     { name: 'Contact Us', path: '/contact' },
   ];
 
+  const handleNavigation = () => {
+    setIsOpen(false);
+    // Additional scroll to top for immediate feedback
+    scrollToTop('smooth');
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -42,15 +49,19 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <motion.div
-              whileHover={{ rotate: 360 }}
+              whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.8 }}
-              className="p-2 bg-green-500 rounded-full"
+              className="relative w-15 h-20 rounded-full overflow-hidden bg-green-500 shadow-lg"
             >
-              <GraduationCap className="h-8 w-8 text-yellow-400" />
+              <img
+                src="/Farakkalogo1.jpg"
+                alt="Farakka Logo"
+                className="w-full h-full object-cover rounded-full"
+              />
             </motion.div>
             <div>
-              <h1 className="text-xl font-bold text-green-600">FARAKKA</h1>
-              <p className="text-xs text-gray-600 -mt-1">Progressive Educational Welfare Society</p>
+              <h1 className="text-2xl font-bold text-green-600">FARAKKA</h1>
+              <p className="text-sm text-gray-600 -mt-1">Progressive Educational Welfare Society</p>
             </div>
           </Link>
 
@@ -72,6 +83,7 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
+                  onClick={handleNavigation}
                   className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
                     location.pathname === item.path
                       ? 'text-green-600 bg-green-50'
@@ -132,7 +144,7 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleNavigation}
                   className={`block px-4 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${
                     location.pathname === item.path
                       ? 'text-green-600 bg-green-50 border-l-4 border-green-500'

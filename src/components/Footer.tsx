@@ -76,20 +76,21 @@ const Footer = () => {
                   <MapPin className="h-4 w-4 text-green-800" />
                 </div>
                 <p className="text-green-100 text-sm leading-relaxed">
-                  Farakka, Murshidabad District, West Bengal, India - 742202
+                  Vill- Manikpur, PO- Dafahat<br />
+                  Dist.- Murshidabad, West Bengal-742224
                 </p>
               </div>
               <div className="flex items-center space-x-3 group">
                 <div className="p-2 bg-yellow-500 rounded-full shadow-md group-hover:bg-yellow-400 transition-colors duration-200">
                   <Phone className="h-4 w-4 text-green-800" />
                 </div>
-                <p className="text-green-100 text-sm">+91 98765 43210</p>
+                <p className="text-green-100 text-sm">+91 78658 44944</p>
               </div>
               <div className="flex items-center space-x-3 group">
                 <div className="p-2 bg-yellow-500 rounded-full shadow-md group-hover:bg-yellow-400 transition-colors duration-200">
                   <Mail className="h-4 w-4 text-green-800" />
                 </div>
-                <p className="text-green-100 text-sm">info@farakkaeducation.org</p>
+                <p className="text-green-100 text-sm">fpews.official@gmail.com</p>
               </div>
             </div>
           </motion.div>

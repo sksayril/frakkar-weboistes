@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Award, BookOpen, TrendingUp } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Counter from './Counter';
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Ensure video plays when component mounts
@@ -78,6 +80,7 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate('/gallery')}
               className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 shadow-lg drop-shadow-lg"
             >
               Explore Programs
@@ -85,6 +88,7 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('https://www.google.com/maps/place/24%C2%B036%2747.4%22N+88%C2%B000%2711.5%22E/@24.6128777,88.0027633,3a,90y,27.3h,90.04t/data=!3m7!1e1!3m5!1sqxUDT04EuSuNfr94WzlrIg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.042456695864132143%26panoid%3DqxUDT04EuSuNfr94WzlrIg%26yaw%3D27.299438060731415!7i13312!8i6656!4m4!3m3!8m2!3d24.6131692!4d88.0031848?hl=en&entry=ttu&g_ep=EgoyMDI1MDgxNy4wIKXMDSoASAFQAw%3D%3D', '_blank')}
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300 drop-shadow-lg"
             >
               Virtual Tour
