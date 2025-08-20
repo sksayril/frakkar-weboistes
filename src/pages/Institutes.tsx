@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { GraduationCap, Users, Award, BookOpen, Globe, Target } from 'lucide-react';
 import UniversityRoadmap from '../components/UniversityRoadmap';
+import InstitutesCarousel from '../components/InstitutesCarousel';
 
 const Institutes = () => {
   const [ref, inView] = useInView({
@@ -85,7 +86,7 @@ const Institutes = () => {
         </div>
       </section>
 
-      {/* Institutes Grid */}
+      {/* Institutes Carousel */}
       <section className="py-20 bg-white" ref={ref}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -100,92 +101,8 @@ const Institutes = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {institutes.map((institute, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 60 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                whileHover={{ y: -10 }}
-                className="bg-green-50 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="relative">
-                  <img
-                    src={institute.image}
-                    alt={institute.name}
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent"></div>
-                </div>
-
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-green-600 mb-4">{institute.name}</h3>
-                  <p className="text-gray-700 mb-6">{institute.description}</p>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    <div className="text-center">
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        className="bg-yellow-400 text-green-800 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2"
-                      >
-                        <Users className="h-6 w-6" />
-                      </motion.div>
-                      <p className="text-2xl font-bold text-green-600">{institute.students}</p>
-                      <p className="text-sm text-gray-600">Students</p>
-                    </div>
-
-                    <div className="text-center">
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        className="bg-yellow-400 text-green-800 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2"
-                      >
-                        <GraduationCap className="h-6 w-6" />
-                      </motion.div>
-                      <p className="text-2xl font-bold text-green-600">{institute.faculty}</p>
-                      <p className="text-sm text-gray-600">Faculty</p>
-                    </div>
-
-                    <div className="text-center">
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        className="bg-yellow-400 text-green-800 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2"
-                      >
-                        <BookOpen className="h-6 w-6" />
-                      </motion.div>
-                      <p className="text-2xl font-bold text-green-600">{institute.programs.length}</p>
-                      <p className="text-sm text-gray-600">Programs</p>
-                    </div>
-                  </div>
-
-                  {/* Programs */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-green-600 mb-3">Programs Offered:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {institute.programs.map((program, i) => (
-                        <motion.span
-                          key={i}
-                          whileHover={{ scale: 1.05 }}
-                          className="bg-yellow-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
-                        >
-                          {program}
-                        </motion.span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
-                  >
-                    Learn More
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {/* Import and use InstitutesCarousel component */}
+          <InstitutesCarousel />
         </div>
       </section>
 
