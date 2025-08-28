@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Check, Target, Users, Heart, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Check, Target, Users, Heart, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 
 const Mission = () => {
   const [ref, inView] = useInView({
@@ -12,6 +12,7 @@ const Mission = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
   const [showAllImages, setShowAllImages] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const missionPoints = [
     "Improve access to quality, affordable education",
@@ -19,42 +20,43 @@ const Mission = () => {
     "Improve social welfare and health programmes"
   ];
 
+  // Fixed image array with unique images and better descriptions
   const allImages = [
     {
       src: "/img12.jpg",
-      alt: "Speaker at Podium",
+      alt: "Leadership addressing community",
       title: "Leadership Address",
       description: "Our leaders addressing the community and sharing our vision for educational excellence and social welfare."
     },
     {
       src: "/img13.jpg",
-      alt: "Community Speaker",
+      alt: "Community engagement event",
       title: "Community Engagement",
       description: "Active participation in community events and educational programs that bring people together."
     },
     {
       src: "/img15.jpg",
-      alt: "Felicitation Ceremony",
+      alt: "Felicitation ceremony",
       title: "Recognition Ceremony",
       description: "Honoring achievements and contributions in our annual felicitation ceremony celebrating excellence."
     },
     {
-      src: "/img12.jpg",
-      alt: "Speaker at Podium",
-      title: "Leadership Address",
-      description: "Our leaders addressing the community and sharing our vision for educational excellence and social welfare."
+      src: "/img16.jpg",
+      alt: "Educational workshop",
+      title: "Educational Workshop",
+      description: "Conducting interactive workshops to enhance learning experiences and skill development."
     },
     {
-      src: "/img13.jpg",
-      alt: "Community Speaker",
-      title: "Community Engagement",
-      description: "Active participation in community events and educational programs that bring people together."
+      src: "/img11.jpg",
+      alt: "Community gathering",
+      title: "Community Gathering",
+      description: "Bringing together community members for collaborative learning and development initiatives."
     },
     {
-      src: "/img15.jpg",
-      alt: "Felicitation Ceremony",
-      title: "Recognition Ceremony",
-      description: "Honoring achievements and contributions in our annual felicitation ceremony celebrating excellence."
+      src: "/img14.jpg",
+      alt: "Student activities",
+      title: "Student Activities",
+      description: "Engaging students in various activities that promote holistic development and learning."
     }
   ];
 
@@ -63,18 +65,26 @@ const Mission = () => {
   const openModal = (index: number) => {
     setSelectedImage(index);
     setIsModalOpen(true);
+    setImageLoaded(false);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setImageLoaded(false);
   };
 
   const nextImage = () => {
     setSelectedImage((prev) => (prev + 1) % allImages.length);
+    setImageLoaded(false);
   };
 
   const prevImage = () => {
     setSelectedImage((prev) => (prev - 1 + allImages.length) % allImages.length);
+    setImageLoaded(false);
+  };
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
   };
 
   return (
@@ -156,19 +166,22 @@ const Mission = () => {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-                className="relative cursor-pointer"
+                className="relative cursor-pointer group bg-gray-100 rounded-2xl overflow-hidden"
                 onClick={() => openModal(0)}
               >
-                <img
-                  src={allImages[0].src}
-                  alt={allImages[0].alt}
-                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-2xl"></div>
-                <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-all duration-300 rounded-2xl flex items-center justify-center">
-                  <span className="text-white opacity-0 hover:opacity-100 transition-opacity duration-300 font-semibold">
-                    Click to view details
-                  </span>
+                <div className="w-full h-64 flex items-center justify-center">
+                  <img
+                    src={allImages[0].src}
+                    alt={allImages[0].alt}
+                    className="w-full h-full object-contain rounded-2xl transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-2xl pointer-events-none"></div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 rounded-2xl flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 text-white font-semibold">
+                    <ZoomIn className="h-5 w-5" />
+                    <span>Click to view details</span>
+                  </div>
                 </div>
               </motion.div>
 
@@ -179,19 +192,22 @@ const Mission = () => {
                     key={index}
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
-                    className="relative cursor-pointer"
+                    className="relative cursor-pointer group bg-gray-100 rounded-2xl overflow-hidden"
                     onClick={() => openModal(index + 1)}
                   >
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-48 object-cover rounded-2xl shadow-lg"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-2xl"></div>
-                    <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-all duration-300 rounded-2xl flex items-center justify-center">
-                      <span className="text-white opacity-0 hover:opacity-100 transition-opacity duration-300 font-semibold text-sm">
-                        View details
-                      </span>
+                    <div className="w-full h-48 flex items-center justify-center">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-contain rounded-2xl transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-2xl pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 rounded-2xl flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 text-white font-semibold text-sm">
+                        <ZoomIn className="h-4 w-4" />
+                        <span>View details</span>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
@@ -227,18 +243,26 @@ const Mission = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   whileHover={{ y: -10, scale: 1.05 }}
-                  className="relative cursor-pointer"
+                  className="relative cursor-pointer group bg-gray-100 rounded-2xl overflow-hidden"
                   onClick={() => openModal(index + 3)}
                 >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-64 object-cover rounded-2xl shadow-lg"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-2xl"></div>
+                  <div className="w-full h-64 flex items-center justify-center">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-contain rounded-2xl transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-2xl pointer-events-none"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-white font-semibold text-lg">{image.title}</h3>
                     <p className="text-white/90 text-sm mt-1">{image.description}</p>
+                  </div>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 rounded-2xl flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 text-white font-semibold">
+                      <ZoomIn className="h-5 w-5" />
+                      <span>View details</span>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -292,79 +316,103 @@ const Mission = () => {
         </div>
       </section>
 
-      {/* Modal */}
+      {/* Enhanced Modal with Better Image Display */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+              className="bg-white rounded-2xl max-w-6xl w-full max-h-[95vh] overflow-hidden shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gray-50">
                 <h3 className="text-2xl font-bold text-green-600">
                   {allImages[selectedImage].title}
                 </h3>
                 <button
                   onClick={closeModal}
-                  className="text-gray-500 hover:text-gray-700 transition-colors"
+                  className="text-gray-500 hover:text-gray-700 transition-colors p-2 hover:bg-gray-200 rounded-full"
                 >
                   <X className="h-6 w-6" />
                 </button>
               </div>
 
-              {/* Modal Content */}
-              <div className="relative">
-                <img
-                  src={allImages[selectedImage].src}
-                  alt={allImages[selectedImage].alt}
-                  className="w-full h-96 object-cover"
-                />
+              {/* Modal Content with Improved Image Display */}
+              <div className="relative bg-gray-100">
+                {/* Loading State */}
+                {!imageLoaded && (
+                  <div className="flex items-center justify-center h-96">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
+                  </div>
+                )}
+                
+                {/* Image Container */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={allImages[selectedImage].src}
+                    alt={allImages[selectedImage].alt}
+                    className={`w-full transition-opacity duration-300 ${
+                      imageLoaded ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    style={{
+                      maxHeight: '70vh',
+                      objectFit: 'contain',
+                      objectPosition: 'center'
+                    }}
+                    onLoad={handleImageLoad}
+                  />
+                </div>
                 
                 {/* Navigation Buttons */}
                 <button
                   onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full backdrop-blur-sm transition-all duration-300"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full backdrop-blur-sm transition-all duration-300 shadow-lg hover:shadow-xl z-10"
+                  aria-label="Previous image"
                 >
                   <ChevronLeft className="h-6 w-6" />
                 </button>
                 
                 <button
                   onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full backdrop-blur-sm transition-all duration-300"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full backdrop-blur-sm transition-all duration-300 shadow-lg hover:shadow-xl z-10"
+                  aria-label="Next image"
                 >
                   <ChevronRight className="h-6 w-6" />
                 </button>
               </div>
 
               {/* Modal Footer */}
-              <div className="p-6">
-                <p className="text-gray-700 leading-relaxed">
+              <div className="p-6 bg-white">
+                <p className="text-gray-700 leading-relaxed text-lg">
                   {allImages[selectedImage].description}
                 </p>
-                <div className="flex justify-between items-center mt-4">
-                  <span className="text-sm text-gray-500">
+                <div className="flex justify-between items-center mt-6">
+                  <span className="text-sm text-gray-500 font-medium">
                     {selectedImage + 1} of {allImages.length}
                   </span>
                   <div className="flex space-x-2">
                     {allImages.map((_, index) => (
                       <button
                         key={index}
-                        onClick={() => setSelectedImage(index)}
+                        onClick={() => {
+                          setSelectedImage(index);
+                          setImageLoaded(false);
+                        }}
                         className={`w-3 h-3 rounded-full transition-all duration-300 ${
                           index === selectedImage 
                             ? 'bg-green-600' 
                             : 'bg-gray-300 hover:bg-gray-400'
                         }`}
+                        aria-label={`Go to image ${index + 1}`}
                       />
                     ))}
                   </div>

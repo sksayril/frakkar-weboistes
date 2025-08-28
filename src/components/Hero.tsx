@@ -44,8 +44,8 @@ const Hero = () => {
           playsInline
           preload="auto"
         >
-          <source src="https://videos.pexels.com/video-files/7490429/7490429-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-          <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+          <source src="/DJI_20250419170624_0266_D.MP4" type="video/mp4" />
+          <source src="/DJI_20250419170624_0266_D.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/40"></div>
