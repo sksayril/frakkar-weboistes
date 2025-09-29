@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Award, Users, GraduationCap, Star, Heart, Target } from 'lucide-react';
@@ -13,7 +12,7 @@ const TeamSection = () => {
     {
       name: "Jakir Hossain",
       position: "Founder & Chairman",
-      image: "/img1.jpg",
+      image: "/img12.jpg",
       description: "Visionary leader with over 20 years of experience in educational development and community welfare.",
       achievements: ["Educational Excellence Award", "Community Service Recognition", "Leadership in Education"],
       icon: Award
@@ -21,7 +20,7 @@ const TeamSection = () => {
     {
       name: "Dipak Kumar Das",
       position: "President",
-      image: "/img2.jpg",
+      image: "/img13.jpg",
       description: "Dedicated leader committed to advancing educational opportunities and fostering academic excellence.",
       achievements: ["Academic Leadership Award", "Innovation in Education", "Student Success Champion"],
       icon: Star
@@ -30,49 +29,49 @@ const TeamSection = () => {
 
   const teachers = [
     {
-      name: "Dr. Priya Sharma",
+      name: "Dr. ....",
       position: "Head of Computer Science",
-      image: "/img3.jpg",
+      image: "https://media.istockphoto.com/id/1220827245/vector/anonymous-gender-neutral-face-avatar-incognito-head-silhouette.jpg?s=612x612&w=0&k=20&c=GMdiPt_h8exnrAQnNo7dIKjwZyYqjH4lRQqV8AOx4QU=",
       specialization: "Artificial Intelligence & Machine Learning",
       experience: "15+ years",
       icon: GraduationCap
     },
     {
-      name: "Prof. Rajesh Kumar",
+      name: "Prof. ......",
       position: "Head of Business Management",
-      image: "/img5.jpg",
+      image: "https://media.istockphoto.com/id/1220827245/vector/anonymous-gender-neutral-face-avatar-incognito-head-silhouette.jpg?s=612x612&w=0&k=20&c=GMdiPt_h8exnrAQnNo7dIKjwZyYqjH4lRQqV8AOx4QU=",
       specialization: "Strategic Management & Finance",
       experience: "12+ years",
       icon: Target
     },
     {
-      name: "Dr. Sunita Patel",
+      name: "Dr. ......",
       position: "Head of Arts & Sciences",
-      image: "/img10.jpg",
+      image: "https://media.istockphoto.com/id/1220827245/vector/anonymous-gender-neutral-face-avatar-incognito-head-silhouette.jpg?s=612x612&w=0&k=20&c=GMdiPt_h8exnrAQnNo7dIKjwZyYqjH4lRQqV8AOx4QU=",
       specialization: "Literature & Cultural Studies",
       experience: "18+ years",
       icon: Heart
     },
     {
-      name: "Prof. Amit Singh",
+      name: "Prof. ......",
       position: "Head of Engineering",
-      image: "/img11.jpg",
+      image: "https://media.istockphoto.com/id/1220827245/vector/anonymous-gender-neutral-face-avatar-incognito-head-silhouette.jpg?s=612x612&w=0&k=20&c=GMdiPt_h8exnrAQnNo7dIKjwZyYqjH4lRQqV8AOx4QU=",
       specialization: "Mechanical Engineering & Robotics",
       experience: "14+ years",
       icon: Users
     },
     {
-      name: "Dr. Meera Reddy",
+      name: "Dr. ........",
       position: "Head of Vocational Training",
-      image: "/img12.jpg",
+      image: "https://media.istockphoto.com/id/1220827245/vector/anonymous-gender-neutral-face-avatar-incognito-head-silhouette.jpg?s=612x612&w=0&k=20&c=GMdiPt_h8exnrAQnNo7dIKjwZyYqjH4lRQqV8AOx4QU=",
       specialization: "Skill Development & Training",
       experience: "10+ years",
       icon: Award
     },
     {
-      name: "Prof. Arjun Verma",
+      name: "Prof. .....",
       position: "Head of Research & Development",
-      image: "/img13.jpg",
+      image: "https://media.istockphoto.com/id/1220827245/vector/anonymous-gender-neutral-face-avatar-incognito-head-silhouette.jpg?s=612x612&w=0&k=20&c=GMdiPt_h8exnrAQnNo7dIKjwZyYqjH4lRQqV8AOx4QU=",
       specialization: "Research Methodology & Innovation",
       experience: "16+ years",
       icon: Star

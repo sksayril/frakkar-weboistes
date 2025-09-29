@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from '../components/Hero';
 // import Leadership from '../components/Leadership';
 import Testimonials from '../components/Testimonials';

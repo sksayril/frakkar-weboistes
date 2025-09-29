@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Quote, Award, Users } from 'lucide-react';
@@ -14,7 +13,7 @@ const LeadershipSpeaks = () => {
       type: "FOUNDER'S MESSAGE",
       name: "Jakir Hossain",
       title: "Founder, FARAKKA Progressive Educational Welfare Society",
-      image: "/img1.jpg",
+      image: "/img12.jpg",
       greeting: "Dear Friends, Supporters, and Community Members,",
       content: [
         "With immense pride, I extend my heartfelt greetings to you all. The FARAKKA Progressive Educational Welfare Society was founded with a deep commitment to education and social upliftment, ensuring that every individual, regardless of their background, has the opportunity to lead a life of dignity and purpose. We believe education is the key to empowerment, transforming communities and shaping a brighter future. Our programs focus on academic excellence while fostering values of integrity, empathy, and social responsibility.",

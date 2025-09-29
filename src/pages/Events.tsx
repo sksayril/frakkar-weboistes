@@ -86,8 +86,8 @@ const Events = () => {
             playsInline
             preload="auto"
           >
-            <source src="/DJI_20250419170604_0265_D.MP4" type="video/mp4" />
-            <source src="/DJI_20250419170604_0265_D.MP4" type="video/mp4" />
+            <source src="https://elboz.s3.amazonaws.com/FastwhitselBackup/DJI_20250419170604_0265_D.MP4" type="video/mp4" />
+            <source src="https://elboz.s3.amazonaws.com/FastwhitselBackup/DJI_20250419170604_0265_D.MP4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/40"></div>

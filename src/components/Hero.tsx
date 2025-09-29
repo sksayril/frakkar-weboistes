@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Award, BookOpen, TrendingUp } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -44,8 +44,8 @@ const Hero = () => {
           playsInline
           preload="auto"
         >
-          <source src="/DJI_20250419170624_0266_D.MP4" type="video/mp4" />
-          <source src="/DJI_20250419170624_0266_D.MP4" type="video/mp4" />
+          <source src="https://elboz.s3.amazonaws.com/FastwhitselBackup/DJI_20250419170624_0266_D.MP4" type="video/mp4" />
+          <source src="https://elboz.s3.amazonaws.com/FastwhitselBackup/DJI_20250419170624_0266_D.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/40"></div>

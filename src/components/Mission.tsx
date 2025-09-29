@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Check, Target, Users, Heart, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
@@ -60,7 +60,6 @@ const Mission = () => {
     }
   ];
 
-  const displayedImages = showAllImages ? allImages : allImages.slice(0, 3);
 
   const openModal = (index: number) => {
     setSelectedImage(index);
